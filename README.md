@@ -1,92 +1,84 @@
 # WAV Vinyl Generator GUI 🎵💿
 
-Визуализатор аудио в виде виниловой спирали с возможностью генерации видео.  
-Скрипт построен на Python с использованием PyQt5, NumPy, SciPy и FFmpeg.
+Visualize audio as a vinyl spiral and generate videos.  
+Built with Python using PyQt5, NumPy, SciPy, and FFmpeg.
 
 ---
 
-## 📌 Описание
+## 📌 Description
 
-Программа позволяет:
+The application allows you to:
 
-- Загружать аудиофайлы (MP3, WAV, FLAC, AAC, OGG, M4A и др.).
-- Строить спиральное отображение аудиоволны с настраиваемыми параметрами:
-  - Начальный радиус `r0` (рекомендовано 100–2000)
-  - Шаг спирали `b` (рекомендовано 1–10)
-  - Масштаб амплитуды `amp` (рекомендовано 10–100)
-- Прослушивать трек прямо в интерфейсе.
-- Генерировать видео с прогрессом спирали поверх аудио.
-- Сохранять изображение спирали в PNG.
+- Load audio files (MP3, WAV, FLAC, AAC, OGG, M4A, etc.).
+- Create a spiral waveform visualization with adjustable parameters:
+  - Initial radius `r0` (recommended 100–2000)
+  - Spiral step `b` (recommended 1–10)
+  - Amplitude scale `amp` (recommended 10–100)
+- Play the track directly in the interface.
+- Generate a video with the spiral overlaying the audio.
+- Save the spiral image as PNG.
 
 ---
 
-## 🛠️ Требования
+## 🛠️ Requirements
 
 - Python 3.10+  
-- Библиотеки Python:
+- Python libraries:
   ```bash
   pip install numpy scipy pillow pyqt5 imageio-ffmpeg ffmpeg-python
-FFmpeg установлен и доступен в PATH (для генерации видео).
+FFmpeg installed and available in PATH (required for video generation).
 
-💻 Установка и запуск
-Клонируем репозиторий:
+💻 Installation & Running
+Clone the repository:
 
 bash
 Copy code
 git clone <your-repo-url>
 cd wav_vinyl_generator_gui
-(Опционально) Создаем виртуальное окружение:
+(Optional) Create a virtual environment:
 
 bash
 Copy code
 python -m venv venv
 source venv/bin/activate  # Linux/macOS
 venv\Scripts\activate     # Windows
-Устанавливаем зависимости:
+Install dependencies:
 
 bash
 Copy code
 pip install -r requirements.txt
-Примечание: Для работы с видео нужен установленный FFmpeg.
+Note: FFmpeg is required for video generation.
 
-Запуск приложения:
+Run the application:
 
 bash
 Copy code
 python wav_vinyl_generator_gui.py
-🖱️ Использование
-Выбери аудиофайл кнопкой "Выбрать аудиофайл".
+🖱️ Usage
+Select an audio file with the "Select Audio File" button.
 
-Настрой параметры спирали (r0, b, amp) по желанию.
+Adjust spiral parameters (r0, b, amp) as desired.
 
-Нажми "Обновить", чтобы увидеть предварительный просмотр.
+Click "Update" to preview the spiral.
 
-Для воспроизведения аудио используйте Play/Pause и Stop.
+Play audio using Play/Pause and Stop buttons.
 
-Для сохранения спирали нажми "Сохранить изображение".
+Save the spiral image with "Save Image".
 
-Для генерации видео с аудио и спиралью нажми "Сгенерировать видео".
+Generate a video with "Generate Video".
 
-Для отмены генерации видео нажми "Отмена".
+Cancel video generation with "Cancel" if needed.
 
-⚠️ Видео и обработка больших файлов могут быть ресурсозатратными.
+⚠️ Video rendering and large audio files may be resource-intensive.
 
-🗂️ Структура проекта
-bash
-Copy code
-wav_vinyl_generator_gui/
-├── wav_vinyl_generator_gui.py  # Главный скрипт
-├── requirements.txt            # Зависимости
-├── README.md                   # Документация
-└── ...                         # Временные файлы создаются автоматически
-🛠️ Траблшутинг
-FFmpeg не найден → Убедись, что FFmpeg установлен и добавлен в PATH.
+🛠️ Troubleshooting
+FFmpeg not found → Make sure FFmpeg is installed and added to PATH.
 
-Ошибка конвертации аудио → Поддерживаются только корректные аудиофайлы.
+Audio conversion error → Only valid audio files are supported.
 
-Приложение не запускается → Проверь версии Python и установленные зависимости.
+Application not starting → Check Python version and installed dependencies.
 
-🎨 Рекомендации
+🎨 Recommendations
 r0: 100–2000
 
 b: 1–10
